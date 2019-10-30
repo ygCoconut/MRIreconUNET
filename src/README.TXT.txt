@@ -1,0 +1,2 @@
+
+The foo.yaml file should contain the reproduceable conda environment that can be loaded from the .yaml file. How to load a .yaml file to create a conda environment can be found in the official conda documentation.

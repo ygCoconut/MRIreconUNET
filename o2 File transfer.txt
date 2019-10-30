@@ -1,0 +1,34 @@
+how to transfer files to o2 server:
+https://wiki.rc.hms.harvard.edu/display/O2/
+
+submit job script:
+sbatch myjob.sh
+
+#0 create interactive session
+srun --pty -p interactive --mem 8000M -t 0-01:00 /bin/bash
+
+#1 create job:
+sbatch -p short -t 8:00 --mem=8000 myjob.sh
+
+#2 upload BIGDIR:
+rsync -av -e ssh BIGDIR nw92@transfer.rc.hms.harvard.edu:/n/scratch2/nw92/
+scp -r BIGDIR nw92@transfer.rc.hms.harvard.edu:/n/scratch2/nw92/
+
+
+how to use o2:
+https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic#UsingSlurmBasic-FilesystemResources
+
+
+how to use rsync:
+https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/
+
+Installs:
+
+#conda activate pytorch
+
+conda install -c anaconda scikit-learn
+conda install -c anaconda pandas
+pip install torchsummary
+conda install -c conda-forge tensorflow
+conda install -c conda-forge tensorboardx
+conda install pytorch torchvision cudatoolkit=10.0 -c pytorch

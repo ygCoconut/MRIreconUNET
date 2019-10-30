@@ -1,0 +1,9 @@
+Parameters
+
+RUNALL = runall.py
+EPOCHS = 1
+LR = 0.01
+WEIGHT_DECAY = 0.1
+BATCH_SIZE = 16
+MODELDIRKEYWORD = foo
+ARCH = UNet3D

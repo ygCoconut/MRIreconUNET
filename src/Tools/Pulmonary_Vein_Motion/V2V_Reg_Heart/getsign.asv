@@ -1,0 +1,19 @@
+function [signx,signy,signz]=getsign(V,meanx,meany,meanz,spacing);
+
+signx = 0;
+signy = 0;
+signz = 0;
+Delta_V = spacing(1,1)*
+for iz = 1 : size(V,3)
+    for iy = 1 : size(V,2)
+        for ix = 1:size(V,1)
+            signx = signx + sign(ix-meanx-bias)*(ix-meanx-bias)*(ix-meanx-bias)*V(ix,iy,iz);
+            signy = signy + sign(iy-meany-bias)*(iy-meany-bias)*(iy-meany-bias)*V(ix,iy,iz);
+            signz = signz + sign(iz-meanz-bias)*(iz-meanz-bias)*(iz-meanz-bias)*V(ix,iy,iz);
+        end
+    end
+end
+signx =sign(signx);
+signy =sign(signy);
+signz =sign(signz);
+return

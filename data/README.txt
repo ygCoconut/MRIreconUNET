@@ -1,0 +1,1 @@
+Please be aware that patient data is highly confidential. It should not be shared under any circumstances.

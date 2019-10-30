@@ -1,0 +1,16 @@
+# Don't track content of these folders
+
+results/
+!results/README.txt
+
+logs/
+
+data/processed_data/*
+data/raw_data/*
+
+__pycache__/
+.ipynb_checkpoints/
+
+DataAugmentation_and_Transforms.ipynb
+Inference_Pytorch.ipynb
+Model_Visualization.ipynb
